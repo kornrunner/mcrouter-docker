@@ -32,7 +32,7 @@ if [[ "x$1" != "x" ]]; then
     INSTALL_DIR=$1/install
     strip "$INSTALL_DIR"/bin/mcrouter
     strip "$INSTALL_DIR"/bin/mcpiper
-    strip --strip-unneeded "$INSTALL_DIR"/lib/libfolly*.so
+    strip --strip-unneeded "$INSTALL_DIR"/lib/libfolly*.so || true
     rm -rf "$PKG_DIR"
     rm -rf "$INSTALL_DIR"/lib/*.a
     rm -rf "$INSTALL_DIR"/include
