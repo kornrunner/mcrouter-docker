@@ -2,7 +2,7 @@ FROM    ubuntu:16.04
 
 ENV     MCROUTER_DIR            /usr/local/mcrouter
 ENV     MCROUTER_REPO           https://github.com/facebook/mcrouter.git
-ENV     MCROUTER_TAG            release-39-0
+ENV     MCROUTER_TAG            release-40-0
 ENV     DEBIAN_FRONTEND         noninteractive
 ENV     MAKE_ARGS               -j8
 
@@ -26,5 +26,4 @@ VOLUME  /var/spool/mcrouter
 RUN     mkdir /usr/local/etc/mcrouter
 VOLUME  /usr/local/etc/mcrouter
 
-EXPOSE  11211
 CMD     ["/usr/local/bin/mcrouter"]
